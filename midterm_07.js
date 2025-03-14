@@ -24,25 +24,34 @@ const students = [
   { name: "Bob", grade: 92 },
   { name: "Charlie", grade: 78 },
   { name: "David", grade: 88 },
+  { name: "Kyrie", grade: 95 },
+  { name: "Dorothy", grade: 69 },
 ];
 
 // SORT THE STUDENTS
 sortStudents(students);
 
-// GET HIGHEST WHICH WOULD BE FIRST
-if (students[0].grade > 90) {
-  console.log(`Congratulations, Top Student ${students[0].name}!`);
-}
+// PRINT CONGRATS FOR GRADES ABOVE 90
+students.forEach((student) => {
+  if (student.grade > 90) {
+    console.log(`Congratulations, Top Student ${student.name}!`);
+  }
+});
 
-// PRINT THE STUDENTS
+console.log();
+
+// PRINT ALL THE STUDENT GRADES
 students.forEach((student) => {
   console.log(`${student.name.padEnd(8)} GRADE ${student.grade}`);
 });
 
 // OUTPUT
-// PS C:\Proj\SCHOOL\CPAN113 JS\mt> node midterm_07.js
+// Congratulations, Top Student Timmy!
 // Congratulations, Top Student Bob!
+
+// Timmy    GRADE 95
 // Bob      GRADE 92
 // David    GRADE 88
 // Alice    GRADE 85
 // Charlie  GRADE 78
+// Dorothy  GRADE 69
